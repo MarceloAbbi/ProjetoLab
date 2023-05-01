@@ -20,7 +20,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#inicio" class="active">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="unicoding.html">Plano de Estudos</a></li>
@@ -179,27 +179,6 @@
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-        $(document).ready(function() {
-        // Add the 'active' class to the first menu item by default
-        $('nav ul li:first-child').addClass('active');
-
-        // Highlight the current section in the menu
-        $(window).scroll(function() {
-            var position = $(this).scrollTop();
-
-            $('section').each(function() {
-            var target = $(this).offset().top;
-            var id = $(this).attr('id');
-
-            if (position >= target) {
-                $('nav ul li.active').removeClass('active');
-                $('nav ul li a[href="#' + id + '"]').parent().addClass('active');
-            }
-            });
-        });
-        });
-        </script>
     </body>
     
 </html>
