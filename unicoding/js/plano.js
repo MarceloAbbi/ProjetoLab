@@ -2,7 +2,7 @@ let root = document.getElementById("root");
 
 
 class todoList{
-    constructor(place, title = "to-do list"){
+    constructor(place, title = "Lista"){
 
         this.place = place;
         this.title = title;
@@ -56,7 +56,7 @@ class Card{
         this.todoList = todoList;
         this.state = {
             text: text,
-            description: "Click to write a description...",
+            description: "Clique para adicionar uma descrição",
             comments: []
         }
         this.render();
