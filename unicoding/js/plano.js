@@ -245,8 +245,6 @@ class Comment{
 }
 
 
-
-
 let addTodoListInput = document.getElementById("addTodoListInput");
 let addTodoListButton = document.getElementById("addTodoListButton");
 
@@ -284,7 +282,6 @@ window.addEventListener('DOMContentLoaded', event => {
     };
 
     navbarShrink();
-
     document.addEventListener('scroll', navbarShrink);
 
     const mainNav = document.body.querySelector('#mainNav');
@@ -306,5 +303,4 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
 });
