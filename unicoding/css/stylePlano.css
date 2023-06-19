@@ -5,8 +5,7 @@
 }
 
 body{
-    /*background-color: rgb(30, 30, 95);*/
-    background-color: orange;
+    background-color: #212529;
     font-family: "Open Sans";
 }
 
@@ -29,14 +28,12 @@ button{
 
 #root{
     margin: 1em;
-    /*border: 1px solid grey;*/
-    /*display: flex;*/
+
     min-width: 1200px;
 }
 
 
 .todoList{
-    /*border: 1px solid red;*/
     border-radius: 4px;
     min-height: 100px;
     background: rgb(235, 235, 235);
@@ -152,7 +149,7 @@ button{
 }
 
 .btn-save{
-    background-color: #5aac44;
+    background-color: #ffc800;
     color: white;
     border: none;
     border-radius: 4px;

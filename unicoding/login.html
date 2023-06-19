@@ -34,38 +34,43 @@
                 <div class="tituloHeader-heading text-uppercase"></div>
             </div>
         </header>
-            <section class="page-section" id="contato">
+            <section class="page-section" id="contact">
                 <div class="container">
                     <div class="text-center">
                         <h2 class="section-heading text-uppercase">Login</h2>
                         <h3 class="section-subheading text-muted">Entre com seu Email e senha para Utilizar o Plano de Estudos</h3>
                     </div>
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="contactForm">
                         <div class="row align-items-stretch mb-5">
                             <div class="col-md-6">
+                                <div class="text-center">
+                                    <div class="form-group">
+                                        <!-- Email -->
+                                        <input class="form-control" id="email" type="email" placeholder="Seu Email" data-sb-validations="required,email" />
+                                        <div class="invalid-feedback" data-sb-feedback="email:required">É necessário digitar um email.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="email:email">Email inválido.</div>
+                                    </div>
 
-                                <div class="form-group">
-                                    <!-- Email -->
-                                    <input class="form-control" id="email" type="email" placeholder="Seu Email" data-sb-validations="required,email" />
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">É necessário digitar um email.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email inválido.</div>
-                                </div>
-
-                                <div class="form-group">
-                                    <!-- senha -->
-                                    <input class="form-control" id="password" type="password" placeholder="Digite uma senha" data-sb-validations="required"></textarea>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">É necessário digitar uma senha.</div>
+                                    <div class="form-group">
+                                        <!-- senha -->
+                                        <input class="form-control" id="password" type="password" placeholder="Digite uma senha" data-sb-validations="required"></textarea>
+                                        <div class="invalid-feedback" data-sb-feedback="message:required">É necessário digitar uma senha.</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center text-white mb-3">
-                                    <div class="fw-bolder">Cadastrado com Sucesso!</div>
+                                    <div class="fw-bolder">Logado com Sucesso!</div>
                                     <br />
                                 </div>
                             </div>
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar Mensagem!</div></div>
-                            <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Entrar</button></div>
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao Entrar</div></div>
+                            <div class="text-center">
+                                <a class="btn btn-primary btn-xl" id="submitButton" href="planoEstudo.html">Login</a>
+                            </div>
+                            
+
                         </form>
                     </div>
                  </div>
