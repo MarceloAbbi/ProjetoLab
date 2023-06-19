@@ -227,6 +227,7 @@ class EditableText{
 
 }
 
++
 class Comment{
     constructor(text, place, card){
         this.text = text;
@@ -263,7 +264,7 @@ let todoList3 = new todoList(root);
 
 
 
-todoList1.input.value = "Estudo";
+todoList1.input.value = "";
 todoList1.addToDo();
 
 window.addEventListener('DOMContentLoaded', event => {
