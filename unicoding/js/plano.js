@@ -2,7 +2,7 @@ let root = document.getElementById("root");
 
 
 class todoList{
-    constructor(place, title = "Lista"){
+    constructor(place, title = "Segunda-feira"){
 
         this.place = place;
         this.title = title;
@@ -204,11 +204,8 @@ class EditableText{
         });
 
         function clickSaveButton(event, object){
-            // Number 13 is the "Enter" key on the keyboard
             if (event.keyCode === 13) {
-                // Cancel the default action, if needed
                 event.preventDefault();
-                // Trigger the button element with a click
                 object.saveButton.click();
               }
         }
@@ -249,7 +246,7 @@ class Comment{
 
 
 
-//-------------main------------
+//main
 
 let addTodoListInput = document.getElementById("addTodoListInput");
 let addTodoListButton = document.getElementById("addTodoListButton");
@@ -264,8 +261,8 @@ addTodoListButton.addEventListener('click',()=>{
 
 
 let todoList1 = new todoList(root);
-let todoList2 = new todoList(root);
-let todoList3 = new todoList(root);
+//let todoList2 = new todoList(root);
+//let todoList3 = new todoList(root);
 
 
 
