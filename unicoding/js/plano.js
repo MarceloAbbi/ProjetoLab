@@ -269,5 +269,3 @@ let todoList3 = new todoList(root);
 
 
 
-todoList1.input.value = "";
-todoList1.addToDo();
