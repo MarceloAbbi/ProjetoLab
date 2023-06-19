@@ -56,7 +56,7 @@ class Card{
         this.todoList = todoList;
         this.state = {
             text: text,
-            description: "Clique para adicionar uma descrição",
+            description: "Clique para escrever uma Descrição",
             comments: []
         }
         this.render();
@@ -112,7 +112,7 @@ class Card{
         this.commentsButton.className = "commentsButton btn-save";
 
         this.commentsButton.innerText = "Adicionar";
-        this.commentsInput.placeholder = "Escreva um comentário...";
+        this.commentsInput.placeholder = "Escrever Comentário";
 
         this.menuContainer.addEventListener('click', (e)=>{
             console.log(e.target);
@@ -189,7 +189,7 @@ class EditableText{
 
         this.p.remove();
         this.input.value = oldText;
-        this.saveButton.innerText = "Save";
+        this.saveButton.innerText = "Salvar";
         this.saveButton.className = "btn-save";
         this.input.classList.add("comment");
 
@@ -204,8 +204,11 @@ class EditableText{
         });
 
         function clickSaveButton(event, object){
+            // Number 13 is the "Enter" key on the keyboard
             if (event.keyCode === 13) {
+                // Cancel the default action, if needed
                 event.preventDefault();
+                // Trigger the button element with a click
                 object.saveButton.click();
               }
         }
@@ -227,7 +230,6 @@ class EditableText{
 
 }
 
-+
 class Comment{
     constructor(text, place, card){
         this.text = text;
@@ -245,6 +247,9 @@ class Comment{
     }
 }
 
+
+
+//-------------main------------
 
 let addTodoListInput = document.getElementById("addTodoListInput");
 let addTodoListButton = document.getElementById("addTodoListButton");
@@ -266,42 +271,3 @@ let todoList3 = new todoList(root);
 
 todoList1.input.value = "";
 todoList1.addToDo();
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
-    };
-
-    navbarShrink();
-    document.addEventListener('scroll', navbarShrink);
-
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
-
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-});
